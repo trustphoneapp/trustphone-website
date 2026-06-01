@@ -3,106 +3,449 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — TrustPhone</title>
+
+<title>Privacy Policy | TrustPhone</title>
+<meta name="description" content="Learn how TrustPhone handles data. Current security analysis runs locally on your Android device.">
+<link rel="canonical" href="https://trustphone.app/privacy.html">
+<link rel="icon" href="/trustphone-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#06060a;color:#f0f0f8;line-height:1.8}
-.container{max-width:680px;margin:0 auto;padding:60px 24px}
-.back{color:#a78bfa;text-decoration:none;font-size:14px;display:block;margin-bottom:40px}
-h1{font-size:32px;font-weight:800;margin-bottom:8px}
-.updated{color:#666;font-size:14px;margin-bottom:48px}
-h2{font-size:18px;font-weight:700;color:#a78bfa;margin:36px 0 12px}
-p{color:#ccc;margin-bottom:16px}
-ul{color:#ccc;padding-left:20px;margin-bottom:16px}
-li{margin-bottom:8px}
-.footer{margin-top:60px;padding-top:24px;border-top:1px solid #ffffff10;color:#666;font-size:14px}
-.footer a{color:#a78bfa}
-a{color:#a78bfa}
+:root {
+  --bg: #07090d;
+  --surface: #10141b;
+  --border: rgba(255,255,255,0.10);
+  --text: #f5f7fb;
+  --muted: #a7afbd;
+  --accent: #2dd4bf;
+  --accent-dark: #0f766e;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.7;
+}
+
+nav {
+  align-items: center;
+  background: rgba(7,9,13,0.94);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 40px;
+}
+
+.nav-brand {
+  align-items: center;
+  color: var(--text);
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.nav-logo {
+  border-radius: 8px;
+  height: 36px;
+  width: 36px;
+}
+
+.nav-name, h1, h2 {
+  font-family: "Syne", sans-serif;
+  letter-spacing: 0;
+}
+
+.nav-name { font-size: 18px; font-weight: 700; }
+
+.nav-back {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 860px;
+  padding: 72px 24px 92px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(38px, 6vw, 58px);
+  line-height: 1.08;
+  margin-bottom: 16px;
+}
+
+.updated {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.intro {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  color: var(--text);
+  margin-bottom: 42px;
+  padding: 20px;
+}
+
+section {
+  border-top: 1px solid var(--border);
+  padding: 30px 0;
+}
+
+h2 {
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+p, li {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+p + p { margin-top: 12px; }
+
+ul {
+  margin: 12px 0 0 20px;
+}
+
+li { margin-bottom: 8px; }
+
+strong { color: var(--text); }
+
+a { color: var(--accent); }
+
+footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 13px;
+  padding: 30px 24px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  nav { padding: 14px 18px; }
+  main { padding: 54px 18px 72px; }
+}
 </style>
 </head>
+
 <body>
-<div class="container">
-<a class="back" href="/">← Back to TrustPhone</a>
-<h1>Privacy Policy</h1>
-<p class="updated">Last updated: May 31, 2026</p>
+<nav>
+  <a class="nav-brand" href="/">
+    <img class="nav-logo" src="/trustphone-icon.png" alt="">
+    <span class="nav-name">TrustPhone</span>
+  </a>
+  <a class="nav-back" href="/">Back to home</a>
+</nav>
 
-<p>TrustPhone helps Android users identify warning signs in notifications, review installed apps, scan APK files, and understand phone permissions using information reported by Android itself.</p>
+<main>
+  <div class="eyebrow">TrustPhone</div>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Effective date: June 1, 2026</p>
 
-<p>We built TrustPhone on a simple principle: your phone data belongs to you. We only collect what is necessary to protect you, we tell you clearly what that is, and we give you full control over it.</p>
+  <div class="intro">
+    <strong>Plain-language summary:</strong>
+    TrustPhone is designed to perform its current security analysis locally on
+    your Android device. Notification previews, APK file contents, installed-app
+    information, and usage information are not uploaded to TrustPhone servers.
+    TrustPhone does not currently operate a cloud threat-intelligence service.
+    The free tier may use Google AdMob, and purchases use Google Play Billing.
+  </div>
 
-<h2>What TrustPhone Does Today</h2>
-<p>In the current version of TrustPhone, all scam detection and security analysis runs locally on your device. Your notification content, app list, file contents, and usage data are not sent to TrustPhone servers.</p>
+  <section>
+    <h2>1. Who We Are</h2>
+    <p>
+      TrustPhone is an Android security-tools application provided by
+      YS Ventures LLC. This Privacy Policy explains how TrustPhone accesses,
+      uses, stores, and shares information.
+    </p>
+    <p>
+      Questions can be sent to
+      <a href="mailto:support@trustphone.app">support@trustphone.app</a>.
+    </p>
+  </section>
 
-<h2>What We May Add In The Future</h2>
-<p>To improve scam detection for all users, future versions of TrustPhone may optionally contribute anonymous threat signals to a shared intelligence network. If this feature is added:</p>
-<ul>
-<li>It will be opt-in only — off by default</li>
-<li>No notification text or message content will ever be sent</li>
-<li>Only anonymous patterns will be shared such as urgency score, domain age, and sender type</li>
-<li>No data that identifies you or your device will be included</li>
-<li>You can turn it off at any time</li>
-</ul>
+  <section>
+    <h2>2. Local Security Analysis</h2>
+    <p>
+      TrustPhone provides tools that help you review warning signs and make
+      informed decisions. TrustPhone does not guarantee that an app, file,
+      website, sender, or notification is safe or unsafe.
+    </p>
+    <p>
+      Current security analysis runs locally on your device. TrustPhone does
+      not upload notification text, APK file contents, installed-app inventory,
+      or usage information to TrustPhone servers.
+    </p>
+  </section>
 
-<h2>What We Never Collect</h2>
-<p>Regardless of any future features, TrustPhone will never collect or share:</p>
-<ul>
-<li>The actual text content of your notifications or messages</li>
-<li>Your contacts or call history</li>
-<li>Your precise location</li>
-<li>Your name, email, or identity</li>
-<li>Your financial information</li>
-<li>Any data that identifies you personally</li>
-</ul>
+  <section>
+    <h2>3. Optional Notification Access</h2>
+    <p>
+      If you enable Notification Access in Android settings, TrustPhone can
+      review readable notification previews locally on your device to identify
+      warning signs such as suspicious links, impersonated brands, repeated
+      website alerts, and related context across messages from the same sender.
+    </p>
+    <ul>
+      <li>Notification Access is optional.</li>
+      <li>TrustPhone does not read your SMS inbox.</li>
+      <li>TrustPhone does not upload notification text.</li>
+      <li>TrustPhone does not automatically remove the original notification.</li>
+    </ul>
+    <p>
+      To explain warnings inside the app, TrustPhone may temporarily store a
+      shortened notification snippet locally. Stored snippets are limited in
+      length. If a link is detected, TrustPhone stores only the website domain
+      needed to explain the warning sign, not the full URL or private query
+      tokens.
+    </p>
+  </section>
 
-<h2>Local Storage</h2>
-<p>Warning history is stored encrypted on your device using Android Keystore AES-256 encryption.</p>
-<ul>
-<li>Warning alerts automatically deleted after 7 days</li>
-<li>Sender history deleted after 90 days</li>
-<li>You can wipe all data at any time from app settings</li>
-</ul>
+  <section>
+    <h2>4. Installed-App Information</h2>
+    <p>
+      TrustPhone reviews installed apps to show useful Android-reported facts,
+      including app name, package name, installation source, requested
+      permissions, and certain special-access settings.
+    </p>
+    <p>
+      Android treats installed-app inventory as sensitive information.
+      TrustPhone uses this access only to provide its app-review features.
+      Installed-app inventory is processed locally and is not uploaded to
+      TrustPhone servers.
+    </p>
+    <p>
+      TrustPhone may also detect when an app is installed or removed so that
+      you can review recent changes on your device.
+    </p>
+  </section>
 
-<h2>Permissions We Use</h2>
-<p><strong>Notification access (optional)</strong><br>Used only to review notifications locally for warning signs. Notification content is never uploaded to any server.</p>
-<p><strong>Usage access (optional)</strong><br>Used to show recently active apps on your device. Never uploaded.</p>
-<p><strong>Storage and media access (optional)</strong><br>Used only when you choose to scan a specific file. File content is never uploaded.</p>
-<p><strong>App visibility</strong><br>Used to review installed app sources and signals. Your app list is not uploaded.</p>
+  <section>
+    <h2>5. Optional Usage Access</h2>
+    <p>
+      If you enable Usage Access in Android settings, TrustPhone uses aggregated
+      device usage information locally to show recent app activity and richer
+      storage estimates. This permission is optional. TrustPhone does not upload
+      usage information to TrustPhone servers.
+    </p>
+  </section>
 
-<h2>Advertising</h2>
-<p>TrustPhone shows ads through Google AdMob for free users. AdMob may collect standard advertising identifiers as described in Google's privacy policy at <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
-<p>You can remove all ads permanently through an in-app subscription or one-time purchase.</p>
+  <section>
+    <h2>6. Optional Media and File Access</h2>
+    <p>
+      If you choose to grant media access, TrustPhone uses the files Android
+      allows it to read to estimate storage categories on your device.
+      TrustPhone can work with limited media access.
+    </p>
+    <p>
+      When you use the APK file-check feature, Android's file picker allows you
+      to choose an APK file or an allowed folder. TrustPhone reads only the file
+      or folder access that you select. APK analysis is performed locally.
+      APK files are not uploaded to TrustPhone servers.
+    </p>
+  </section>
 
-<h2>In-App Purchases</h2>
-<p>All purchases are handled by Google Play Billing. TrustPhone does not store your payment information.</p>
+  <section>
+    <h2>7. Sender-Source Checks</h2>
+    <p>
+      TrustPhone includes a small local registry of sender information for
+      selected commonly impersonated brands. If a message claims to come from a
+      known source, TrustPhone may compare the sender and website domain with
+      locally stored reference information.
+    </p>
+    <p>
+      This is a helpful review signal, not cryptographic proof and not a
+      guarantee. Sender-source checks run locally on your device.
+    </p>
+  </section>
 
-<h2>Data Sharing</h2>
-<p>TrustPhone does not sell your data. The only third party that receives data from TrustPhone is Google AdMob for ad delivery to free users.</p>
+  <section>
+    <h2>8. Local Storage and Encryption</h2>
+    <p>
+      Warning history is stored locally in an encrypted SQLCipher database.
+      The database passphrase is protected using Android Keystore AES-256-GCM.
+    </p>
+    <ul>
+      <li>Notification warning alerts auto-delete after 7 days.</li>
+      <li>Sender review history auto-deletes after 90 days.</li>
+      <li>Short-lived context used to connect related alerts is pruned after 30 minutes.</li>
+      <li>You can clear locally stored warning history from inside the app.</li>
+      <li>Uninstalling TrustPhone removes its locally stored app data.</li>
+    </ul>
+  </section>
 
-<h2>Children</h2>
-<p>TrustPhone is not directed at children under 13 and does not knowingly collect data from children under 13.</p>
+  <section>
+    <h2>9. Ads and Advertising ID</h2>
+    <p>
+      The free tier may display limited ads through Google AdMob. AdMob may
+      process information such as the device advertising ID, IP address,
+      device information, ad interactions, and diagnostic information where
+      permitted by Android, Google policies, and applicable law.
+    </p>
+    <p>
+      This information is handled by Google under its own policies. TrustPhone
+      does not send notification text, installed-app inventory, APK file
+      contents, or usage information to AdMob.
+    </p>
+    <p>
+      Learn more through
+      <a href="https://policies.google.com/privacy" rel="noopener noreferrer">
+        Google's Privacy Policy
+      </a>.
+    </p>
+  </section>
 
-<h2>Your Rights And Controls</h2>
-<ul>
-<li>Wipe all local data anytime from Settings → Wipe Data in the app</li>
-<li>Revoke any permission anytime in Android Settings</li>
-<li>Opt out of future anonymous sharing features when they are added</li>
-<li>Contact us with any privacy questions</li>
-</ul>
+  <section>
+    <h2>10. Google Play Billing</h2>
+    <p>
+      Optional purchases, subscriptions, and donations are processed through
+      Google Play Billing. Google may process purchase-related information under
+      its own policies. TrustPhone does not receive your full payment-card
+      details.
+    </p>
+    <p>
+      TrustPhone may receive the purchase status needed to unlock ad-free
+      access or confirm an optional donation.
+    </p>
+  </section>
 
-<h2>Data Deletion</h2>
-<p>You can delete all locally stored data at any time by opening TrustPhone and going to Settings → Wipe Data. No account or external request is needed. Data is deleted immediately.</p>
-<p>To request deletion of any other data contact us at <a href="mailto:support@trustphone.app">support@trustphone.app</a></p>
+  <section>
+    <h2>11. User-Initiated Sharing</h2>
+    <p>
+      Some app screens may allow you to share selected information using
+      Android's share menu. Sharing occurs only when you choose it. Information
+      you share is handled by the app or service you select and is subject to
+      that service's privacy policy.
+    </p>
+  </section>
 
-<h2>How We Notify You Of Changes</h2>
-<p>When we make significant changes to this policy we will update the Last Updated date at the top, show a notice inside the TrustPhone app, and require your consent before any new data collection begins.</p>
+  <section>
+    <h2>12. Information TrustPhone Does Not Request</h2>
+    <p>TrustPhone does not currently request access to:</p>
+    <ul>
+      <li>Your contacts or address book</li>
+      <li>Your SMS inbox</li>
+      <li>Your call history</li>
+      <li>Your precise location</li>
+      <li>Your microphone</li>
+      <li>Your camera</li>
+      <li>Accessibility Service control</li>
+    </ul>
+  </section>
 
-<h2>Contact</h2>
-<p>Questions or concerns about your privacy:<br>
-<a href="mailto:support@trustphone.app">support@trustphone.app</a></p>
+  <section>
+    <h2>13. Accounts and Deletion</h2>
+    <p>
+      TrustPhone does not currently require or provide user accounts.
+      There is no TrustPhone cloud account to delete.
+    </p>
+    <p>
+      You can clear locally stored warning history inside the app. You can
+      remove remaining locally stored TrustPhone data by uninstalling the app
+      or clearing the app's storage in Android settings.
+    </p>
+  </section>
 
-<div class="footer">
-<a href="/">TrustPhone</a> · <a href="/terms.html">Terms of Service</a>
-</div>
-</div>
+  <section>
+    <h2>14. Future Optional Cloud Features</h2>
+    <p>
+      TrustPhone does not currently upload security-analysis data to a
+      TrustPhone cloud service.
+    </p>
+    <p>
+      If TrustPhone introduces optional community threat-intelligence features
+      in the future, those features will be disclosed clearly before use.
+      Where required, they will be off by default and require your affirmative
+      consent. This Privacy Policy and the Google Play Data Safety disclosures
+      will be updated before those features are enabled.
+    </p>
+  </section>
+
+  <section>
+    <h2>15. Website Privacy</h2>
+    <p>
+      The TrustPhone website is hosted using GitHub Pages. Standard connection
+      information, such as IP address and browser request details, may be
+      processed by the hosting provider when you visit this website.
+    </p>
+    <p>
+      This website currently loads Google Fonts. Loading those fonts may cause
+      standard connection information, such as your IP address, to be sent to
+      Google. The website does not require an account and does not use a
+      TrustPhone analytics service.
+    </p>
+    <p>
+      Learn more through
+      <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+         rel="noopener noreferrer">
+        GitHub's Privacy Statement
+      </a>
+      and
+      <a href="https://policies.google.com/privacy" rel="noopener noreferrer">
+        Google's Privacy Policy
+      </a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>16. Children</h2>
+    <p>
+      TrustPhone is not directed to children under 13. We do not knowingly
+      collect personal information from children through a TrustPhone cloud
+      account because TrustPhone does not currently provide accounts.
+    </p>
+  </section>
+
+  <section>
+    <h2>17. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy when TrustPhone changes. The effective
+      date at the top of this page will be revised when an update is published.
+      Material changes will be disclosed where required by applicable law or
+      platform policy.
+    </p>
+  </section>
+
+  <section>
+    <h2>18. Contact</h2>
+    <p>
+      For questions about this Privacy Policy or TrustPhone's data practices,
+      contact:
+    </p>
+    <p>
+      <strong>YS Ventures LLC</strong><br>
+      Email:
+      <a href="mailto:support@trustphone.app">support@trustphone.app</a>
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>
+    &copy; 2026 YS Ventures LLC &nbsp;|&nbsp;
+    <a href="/">Home</a> &nbsp;|&nbsp;
+    <a href="/terms.html">Terms of Service</a>
+  </p>
+</footer>
 </body>
 </html>
