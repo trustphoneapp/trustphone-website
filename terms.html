@@ -3,57 +3,465 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Service — TrustPhone</title>
+
+<title>Terms of Service | TrustPhone</title>
+<meta name="description" content="Terms of Service for TrustPhone Android security tools.">
+<link rel="canonical" href="https://trustphone.app/terms.html">
+<link rel="icon" href="/trustphone-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#06060a;color:#f0f0f8;line-height:1.8}
-.container{max-width:680px;margin:0 auto;padding:60px 24px}
-.back{color:#a78bfa;text-decoration:none;font-size:14px;display:block;margin-bottom:40px}
-h1{font-size:32px;font-weight:800;margin-bottom:8px}
-.updated{color:#666;font-size:14px;margin-bottom:48px}
-h2{font-size:18px;font-weight:700;color:#a78bfa;margin:36px 0 12px}
-p{color:#ccc;margin-bottom:16px}
-.footer{margin-top:60px;padding-top:24px;border-top:1px solid #ffffff10;color:#666;font-size:14px}
-.footer a{color:#a78bfa}
-a{color:#a78bfa}
+:root {
+  --bg: #07090d;
+  --surface: #10141b;
+  --border: rgba(255,255,255,0.10);
+  --text: #f5f7fb;
+  --muted: #a7afbd;
+  --accent: #2dd4bf;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.7;
+}
+
+nav {
+  align-items: center;
+  background: rgba(7,9,13,0.94);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 40px;
+}
+
+.nav-brand {
+  align-items: center;
+  color: var(--text);
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.nav-logo {
+  border-radius: 8px;
+  height: 36px;
+  width: 36px;
+}
+
+.nav-name, h1, h2 {
+  font-family: "Syne", sans-serif;
+  letter-spacing: 0;
+}
+
+.nav-name { font-size: 18px; font-weight: 700; }
+
+.nav-back {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 860px;
+  padding: 72px 24px 92px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(38px, 6vw, 58px);
+  line-height: 1.08;
+  margin-bottom: 16px;
+}
+
+.updated {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.intro {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  margin-bottom: 42px;
+  padding: 20px;
+}
+
+section {
+  border-top: 1px solid var(--border);
+  padding: 30px 0;
+}
+
+h2 {
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+p, li {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+p + p { margin-top: 12px; }
+
+ul {
+  margin: 12px 0 0 20px;
+}
+
+li { margin-bottom: 8px; }
+
+strong { color: var(--text); }
+
+a { color: var(--accent); }
+
+footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 13px;
+  padding: 30px 24px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  nav { padding: 14px 18px; }
+  main { padding: 54px 18px 72px; }
+}
 </style>
 </head>
+
 <body>
-<div class="container">
-<a class="back" href="/">← Back to TrustPhone</a>
-<h1>Terms of Service</h1>
-<p class="updated">Last updated: May 31, 2026</p>
+<nav>
+  <a class="nav-brand" href="/">
+    <img class="nav-logo" src="/trustphone-icon.png" alt="">
+    <span class="nav-name">TrustPhone</span>
+  </a>
+  <a class="nav-back" href="/">Back to home</a>
+</nav>
 
-<h2>Acceptance</h2>
-<p>By downloading or using TrustPhone you agree to these terms. If you do not agree, do not use the app.</p>
+<main>
+  <div class="eyebrow">TrustPhone</div>
+  <h1>Terms of Service</h1>
+  <p class="updated">Effective date: June 1, 2026</p>
 
-<h2>What TrustPhone Does</h2>
-<p>TrustPhone is an Android security utility that helps users identify warning signs in notifications, review installed apps, and scan files. It provides information to help you make decisions — it does not make decisions for you.</p>
+  <div class="intro">
+    <strong>Plain-language summary:</strong>
+    TrustPhone provides Android security tools that explain warning signs and
+    help you review your device. TrustPhone does not guarantee that it will
+    detect every scam, harmful app, suspicious file, or unwanted notification.
+    You remain in control of every decision.
+  </div>
 
-<h2>No Guarantee Of Detection</h2>
-<p>TrustPhone uses local heuristics and pattern matching to identify potential threats. It may not detect all scams and may occasionally flag legitimate messages. You should always use your own judgment.</p>
+  <section>
+    <h2>1. Acceptance of These Terms</h2>
+    <p>
+      These Terms of Service apply to your use of the TrustPhone Android
+      application and the TrustPhone website. TrustPhone is provided by
+      YS Ventures LLC.
+    </p>
+    <p>
+      By accessing or using TrustPhone, you agree to these Terms and our
+      <a href="/privacy.html">Privacy Policy</a>. If you do not agree, do not use
+      TrustPhone.
+    </p>
+  </section>
 
-<h2>No Warranty</h2>
-<p>TrustPhone is provided as-is without warranty of any kind. We do not guarantee the app will be error-free or uninterrupted.</p>
+  <section>
+    <h2>2. What TrustPhone Does</h2>
+    <p>
+      TrustPhone provides practical Android security tools. Depending on the
+      features you choose to use, TrustPhone may help you:
+    </p>
+    <ul>
+      <li>Review warning signs found in notification previews</li>
+      <li>Review newly installed apps and Android-reported app facts</li>
+      <li>Inspect APK file details and requested permissions before installation</li>
+      <li>Identify warning signs in suspicious links and sender-source information</li>
+      <li>Follow guides for turning off unwanted website notifications</li>
+      <li>Review storage information and selected special-access settings</li>
+    </ul>
+    <p>
+      TrustPhone provides information for your review. It does not make
+      decisions for you, automatically remove apps, or guarantee protection.
+    </p>
+  </section>
 
-<h2>Limitation Of Liability</h2>
-<p>TrustPhone and YS Ventures LLC are not liable for any damages arising from your use of the app or reliance on its output.</p>
+  <section>
+    <h2>3. Your Decisions Remain Your Responsibility</h2>
+    <p>
+      Security tools can be helpful, but no automated system can identify every
+      scam, harmful file, impersonated sender, or unsafe app. TrustPhone may miss
+      warning signs or occasionally flag legitimate content for review.
+    </p>
+    <p>
+      You should use your own judgment before opening links, installing files,
+      sharing personal information, sending money, or changing Android settings.
+      When in doubt, independently contact the relevant company or organization
+      using a trusted website, official app, or known phone number.
+    </p>
+  </section>
 
-<h2>Subscriptions And Purchases</h2>
-<p>Subscriptions are billed through Google Play and renew automatically unless cancelled at least 24 hours before the renewal date. Manage subscriptions in your Google Play account settings.</p>
+  <section>
+    <h2>4. Optional Android Permissions</h2>
+    <p>
+      Some TrustPhone features require optional Android permissions or special
+      access that you choose to enable. These may include Notification Access,
+      Usage Access, media access, and file-picker access.
+    </p>
+    <p>
+      You can decline or revoke optional access through Android settings.
+      Features that depend on that access may become unavailable or provide
+      limited results.
+    </p>
+  </section>
 
-<h2>Changes To These Terms</h2>
-<p>We may update these terms. Continued use of TrustPhone after changes means you accept the updated terms.</p>
+  <section>
+    <h2>5. Notification Review</h2>
+    <p>
+      If you enable Notification Access, TrustPhone can review readable
+      notification previews locally on your device for warning signs.
+      TrustPhone does not read your SMS inbox and does not automatically remove
+      the original notification.
+    </p>
+    <p>
+      Notification review results are informational. A warning does not prove
+      that a message is fraudulent. The absence of a warning does not prove that
+      a message is safe.
+    </p>
+  </section>
 
-<h2>Governing Law</h2>
-<p>These terms are governed by the laws of the Commonwealth of Pennsylvania, United States.</p>
+  <section>
+    <h2>6. Sender-Source Checks</h2>
+    <p>
+      TrustPhone may compare sender information and website domains with a
+      locally stored registry for selected commonly impersonated sources.
+      Registry information may be incomplete, become outdated, or vary by
+      region, provider, campaign, or service.
+    </p>
+    <p>
+      Sender-source checks are helpful review signals. They are not
+      cryptographic proof of identity and are not guarantees.
+    </p>
+  </section>
 
-<h2>Contact</h2>
-<p><a href="mailto:support@trustphone.app">support@trustphone.app</a></p>
+  <section>
+    <h2>7. Installed-App and APK File Review</h2>
+    <p>
+      TrustPhone may display Android-reported information about installed apps
+      and APK files, such as package name, installation source, requested
+      permissions, file details, and special-access settings.
+    </p>
+    <p>
+      APK file checks are not antivirus scans and do not guarantee that a file
+      is safe or harmful. An app may behave differently after installation,
+      after an update, or when connected to a remote service.
+    </p>
+  </section>
 
-<div class="footer">
-<a href="/">TrustPhone</a> · <a href="/privacy.html">Privacy Policy</a>
-</div>
-</div>
+  <section>
+    <h2>8. Website Notification Guides</h2>
+    <p>
+      TrustPhone may provide step-by-step guides for reviewing browser settings
+      and turning off unwanted website notifications. Browser menus can differ
+      by browser version, Android version, device manufacturer, and region.
+    </p>
+    <p>
+      TrustPhone does not control your browser and does not automatically change
+      browser settings for you.
+    </p>
+  </section>
+
+  <section>
+    <h2>9. Ads and Ad-Free Access</h2>
+    <p>
+      The free tier may display limited ads through Google AdMob. Optional
+      ad-free plans remove ads displayed inside TrustPhone only. They do not
+      remove advertisements, browser notifications, or popups from other apps,
+      websites, or services.
+    </p>
+    <p>
+      Google may process certain information for advertising purposes under its
+      own policies. See our <a href="/privacy.html">Privacy Policy</a> for
+      additional details.
+    </p>
+  </section>
+
+  <section>
+    <h2>10. Purchases, Subscriptions, and Donations</h2>
+    <p>
+      Optional subscriptions, one-time purchases, and donations are processed
+      through Google Play Billing. Google Play displays the applicable price,
+      billing period, and purchase terms before you confirm a transaction.
+    </p>
+    <p>
+      Recurring subscriptions renew automatically unless you cancel them through
+      Google Play before the next renewal. Uninstalling TrustPhone does not
+      automatically cancel a subscription. After cancellation, access generally
+      continues through the period already paid for, subject to Google Play's
+      applicable terms.
+    </p>
+    <p>
+      A lifetime ad-free purchase, where offered, means ad-free access for the
+      purchased product while TrustPhone remains available and supported. It is
+      not a promise that any app or service will operate forever.
+    </p>
+    <p>
+      Optional donations support continued development. Donations do not unlock
+      additional security features.
+    </p>
+    <p>
+      Manage subscriptions through
+      <a href="https://play.google.com/store/account/subscriptions"
+         rel="noopener noreferrer">
+        Google Play subscriptions
+      </a>.
+      Refund eligibility is subject to Google Play policies and applicable law.
+    </p>
+  </section>
+
+  <section>
+    <h2>11. Acceptable Use</h2>
+    <p>You agree not to misuse TrustPhone. For example, you must not:</p>
+    <ul>
+      <li>Use TrustPhone to access a device without authorization</li>
+      <li>Attempt to interfere with or disrupt TrustPhone</li>
+      <li>Reverse engineer TrustPhone except where applicable law permits it</li>
+      <li>Use TrustPhone to violate the rights of another person</li>
+      <li>Use TrustPhone for unlawful, deceptive, or harmful purposes</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>12. Third-Party Services</h2>
+    <p>
+      TrustPhone may interact with third-party services, including Google Play
+      Billing and Google AdMob. The TrustPhone website is hosted using GitHub
+      Pages and currently loads Google Fonts.
+    </p>
+    <p>
+      Third-party services operate under their own terms and privacy policies.
+      YS Ventures LLC does not control those services.
+    </p>
+  </section>
+
+  <section>
+    <h2>13. Availability and Changes</h2>
+    <p>
+      We may update, modify, suspend, or discontinue parts of TrustPhone. We may
+      add, change, or remove features to improve reliability, comply with law or
+      platform policies, or respond to changing security risks.
+    </p>
+    <p>
+      We do not guarantee that TrustPhone will always be available, error-free,
+      compatible with every Android device, or compatible with every browser
+      version.
+    </p>
+  </section>
+
+  <section>
+    <h2>14. No Professional Advice</h2>
+    <p>
+      TrustPhone does not provide legal, financial, medical, emergency, or
+      professional security advice. If you believe you are facing fraud,
+      identity theft, financial loss, or an emergency, contact the appropriate
+      bank, service provider, law-enforcement agency, or emergency service.
+    </p>
+  </section>
+
+  <section>
+    <h2>15. Disclaimer of Warranties</h2>
+    <p>
+      To the maximum extent permitted by applicable law, TrustPhone is provided
+      on an "as is" and "as available" basis without warranties of any kind,
+      whether express, implied, or statutory.
+    </p>
+    <p>
+      We do not guarantee that TrustPhone will detect every warning sign,
+      prevent harm, or produce complete or error-free results. Nothing in these
+      Terms limits any warranty or consumer right that cannot legally be
+      excluded.
+    </p>
+  </section>
+
+  <section>
+    <h2>16. Limitation of Liability</h2>
+    <p>
+      To the maximum extent permitted by applicable law, YS Ventures LLC will
+      not be liable for indirect, incidental, special, consequential, or
+      punitive damages arising from your use of or reliance on TrustPhone.
+    </p>
+    <p>
+      Nothing in these Terms excludes or limits liability where doing so would
+      be prohibited by applicable law.
+    </p>
+  </section>
+
+  <section>
+    <h2>17. Changes to These Terms</h2>
+    <p>
+      We may update these Terms when TrustPhone changes. The effective date at
+      the top of this page will be revised when updates are published. Material
+      changes will be disclosed where required by applicable law.
+    </p>
+    <p>
+      Your continued use of TrustPhone after updated Terms become effective
+      means that you accept the updated Terms, except where applicable law
+      requires a different form of notice or consent.
+    </p>
+  </section>
+
+  <section>
+    <h2>18. Governing Law</h2>
+    <p>
+      These Terms are governed by the laws of the Commonwealth of Pennsylvania,
+      United States, without regard to conflict-of-law principles, except where
+      mandatory consumer-protection laws in your jurisdiction apply.
+    </p>
+  </section>
+
+  <section>
+    <h2>19. Severability</h2>
+    <p>
+      If any provision of these Terms is found unenforceable, the remaining
+      provisions will remain in effect to the extent permitted by law.
+    </p>
+  </section>
+
+  <section>
+    <h2>20. Contact</h2>
+    <p>
+      Questions about these Terms can be sent to:
+    </p>
+    <p>
+      <strong>YS Ventures LLC</strong><br>
+      Email:
+      <a href="mailto:support@trustphone.app">support@trustphone.app</a>
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>
+    &copy; 2026 YS Ventures LLC &nbsp;|&nbsp;
+    <a href="/">Home</a> &nbsp;|&nbsp;
+    <a href="/privacy.html">Privacy Policy</a>
+  </p>
+</footer>
 </body>
 </html>
