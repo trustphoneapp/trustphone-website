@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>TrustPhone — Android Security Tools</title>
-<meta name="description" content="TrustPhone helps you review warning signs in notification previews, newly installed apps, and APK files using on-device checks. No account required.">
+<meta name="description" content="TrustPhone helps you review warning signs in notification previews, newly installed apps, and APK files using on-device checks. Premium AI scam detection available.">
 
 <link rel="canonical" href="https://trustphone.app/">
 <link rel="icon" href="/trustphone-icon.png">
 
 <meta property="og:site_name" content="TrustPhone">
 <meta property="og:title" content="TrustPhone — Android Security Tools">
-<meta property="og:description" content="Security analysis stays on your phone. No account required.">
+<meta property="og:description" content="On-device scam detection. Independent contacts backup. No fear, just facts.">
 <meta property="og:url" content="https://trustphone.app/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://trustphone.app/social-preview.png">
@@ -39,7 +39,6 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -72,11 +71,7 @@ nav {
   text-decoration: none;
 }
 
-.nav-logo {
-  border-radius: 8px;
-  height: 36px;
-  width: 36px;
-}
+.nav-logo { border-radius: 8px; height: 36px; width: 36px; }
 
 .nav-name, h1, h2, h3 {
   font-family: "Syne", sans-serif;
@@ -123,10 +118,16 @@ nav {
   border-radius: 99px;
   color: var(--accent);
   display: inline-flex;
+  align-items: center;
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 28px;
   padding: 7px 14px;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
 
 h1 {
@@ -163,20 +164,8 @@ h1 span { color: var(--accent); }
   text-decoration: none;
 }
 
-.btn-primary {
-  background: var(--accent-dark);
-  color: white;
-}
-
-.btn-disabled {
-  cursor: default;
-  opacity: 0.82;
-}
-
-.btn-secondary {
-  border: 1px solid var(--border);
-  color: var(--text);
-}
+.btn-primary { background: var(--accent-dark); color: white; }
+.btn-secondary { border: 1px solid var(--border); color: var(--text); }
 
 .hero-stats {
   display: flex;
@@ -192,11 +181,7 @@ h1 span { color: var(--accent); }
   font-weight: 800;
 }
 
-.stat-label {
-  color: var(--muted);
-  font-size: 13px;
-  margin-top: 5px;
-}
+.stat-label { color: var(--muted); font-size: 13px; margin-top: 5px; }
 
 .trust-bar {
   background: var(--surface);
@@ -218,13 +203,9 @@ h1 span { color: var(--accent); }
   gap: 9px;
 }
 
-.trust-dot {
-  background: var(--accent);
-  border-radius: 50%;
-  height: 7px;
-  width: 7px;
-}
+.trust-dot { background: var(--accent); border-radius: 50%; height: 7px; width: 7px; }
 
+/* Features */
 .features {
   margin: 0 auto;
   max-width: 1180px;
@@ -263,19 +244,15 @@ h1 span { color: var(--accent); }
   background: var(--surface);
   border-radius: 6px;
   padding: 34px 30px;
+  transition: background 0.15s;
 }
 
 .feature-card:hover { background: var(--surface-hover); }
-
 .feature-card.large { grid-column: span 2; }
 
-.feature-icon {
-  font-size: 24px;
-  margin-bottom: 18px;
-}
+.feature-icon { font-size: 24px; margin-bottom: 18px; }
 
 .feature-tag {
-  color: var(--purple);
   display: block;
   font-size: 11px;
   font-weight: 700;
@@ -283,10 +260,11 @@ h1 span { color: var(--accent); }
   text-transform: uppercase;
 }
 
-.feature-card h3 {
-  font-size: 19px;
-  margin-bottom: 10px;
-}
+.tag-free { color: var(--accent); }
+.tag-premium { color: var(--purple); }
+.tag-new { color: var(--amber); }
+
+.feature-card h3 { font-size: 19px; margin-bottom: 10px; }
 
 .feature-card p {
   color: var(--muted);
@@ -294,17 +272,119 @@ h1 span { color: var(--accent); }
   line-height: 1.65;
 }
 
-.cta {
+/* Pricing */
+.pricing {
   background: var(--surface);
   border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 100px 30px;
+  text-align: center;
+}
+
+.pricing-inner { margin: 0 auto; max-width: 980px; }
+
+.pricing-grid {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 48px;
+  text-align: left;
+}
+
+.pricing-card {
+  background: var(--bg);
+  border-radius: 6px;
+  padding: 32px 28px;
+}
+
+.pricing-card.featured {
+  border: 1px solid rgba(45,212,191,0.35);
+  position: relative;
+}
+
+.featured-badge {
+  background: var(--accent-dark);
+  border-radius: 4px;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  left: 28px;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  position: absolute;
+  text-transform: uppercase;
+  top: -12px;
+}
+
+.pricing-card h3 { font-size: 20px; margin-bottom: 8px; }
+
+.pricing-price {
+  font-family: "Syne", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.pricing-price span {
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.pricing-note {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.pricing-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
+}
+
+.pricing-features { list-style: none; }
+
+.pricing-features li {
+  align-items: flex-start;
+  color: var(--muted);
+  display: flex;
+  font-size: 14px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.pricing-features li::before {
+  color: var(--accent);
+  content: "✓";
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.pricing-features li.dimmed::before { color: var(--border); }
+.pricing-features li.dimmed { opacity: 0.45; }
+
+.pricing-cta {
+  border-radius: 6px;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 24px;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.pricing-cta.primary { background: var(--accent-dark); color: white; }
+.pricing-cta.secondary { border: 1px solid var(--border); color: var(--text); }
+
+/* CTA */
+.cta {
   padding: 92px 24px;
   text-align: center;
 }
 
-.cta-inner {
-  margin: auto;
-  max-width: 640px;
-}
+.cta-inner { margin: auto; max-width: 640px; }
 
 .cta h2 {
   font-size: clamp(32px, 4vw, 48px);
@@ -329,15 +409,9 @@ footer {
   padding: 38px 40px;
 }
 
-.footer-brand {
-  font-family: "Syne", sans-serif;
-  font-weight: 700;
-}
+.footer-brand { font-family: "Syne", sans-serif; font-weight: 700; }
 
-.footer-links {
-  display: flex;
-  gap: 24px;
-}
+.footer-links { display: flex; gap: 24px; }
 
 .footer-links a, .footer-copy {
   color: var(--muted);
@@ -355,6 +429,8 @@ footer {
   .features { padding: 72px 18px; }
   .features-grid { grid-template-columns: 1fr; }
   .feature-card.large { grid-column: span 1; }
+  .pricing { padding: 72px 18px; }
+  .pricing-grid { grid-template-columns: 1fr; }
   footer { align-items: flex-start; flex-direction: column; padding: 30px 20px; }
 }
 </style>
@@ -368,129 +444,252 @@ footer {
   </a>
   <div class="nav-links">
     <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
     <a href="privacy.html">Privacy</a>
-    <a href="#download" class="nav-cta">Launch status</a>
+    <a href="https://play.google.com/store/apps/details?id=app.trustphone" class="nav-cta" target="_blank">Get on Google Play</a>
   </div>
 </nav>
 
 <main>
+
 <section class="hero">
   <div class="hero-inner">
-<div class="hero-badge"><span style="width:8px;height:8px;background:#2dd4bf;border-radius:50%;display:inline-block;animation:pulse 2s infinite;margin-right:8px;flex-shrink:0;"></span>Now available on Google Play</div>    <h1>TrustPhone<br><span>Android security tools.</span></h1>
+    <div class="hero-badge">
+      <span style="width:8px;height:8px;background:#2dd4bf;border-radius:50%;display:inline-block;animation:pulse 2s infinite;margin-right:8px;flex-shrink:0;"></span>
+      Now live on Google Play
+    </div>
+    <h1>Stay safe online.<br><span>Without the panic.</span></h1>
     <p class="hero-sub">
-      Review warning signs in notification previews, newly installed apps,
-      and APK files using on-device checks.
+      TrustPhone detects suspicious messages, fake app alerts, and scam
+      notifications — calmly, in plain English. Core security runs on your
+      device. No scary warnings. No false alarms.
     </p>
 
     <div class="hero-actions">
       <a href="https://play.google.com/store/apps/details?id=app.trustphone" class="btn-primary" target="_blank">▶ Get it on Google Play</a>
-      <a href="#features" class="btn-secondary">Explore the tools</a>
+      <a href="#features" class="btn-secondary">See what it does</a>
     </div>
 
     <div class="hero-stats">
       <div class="stat">
-        <span class="stat-num">Local</span>
-        <div class="stat-label">Security checks</div>
-      </div>
-      <div class="stat">
-        <span class="stat-num">None</span>
-        <div class="stat-label">Notification text uploaded</div>
+        <span class="stat-num">On-device</span>
+        <div class="stat-label">Core scam detection</div>
       </div>
       <div class="stat">
         <span class="stat-num">AES-256</span>
-        <div class="stat-label">Protected database key</div>
+        <div class="stat-label">Encrypted local storage</div>
+      </div>
+      <div class="stat">
+        <span class="stat-num">Zero</span>
+        <div class="stat-label">Notification text uploaded</div>
       </div>
     </div>
   </div>
 </section>
 
 <section class="trust-bar" aria-label="TrustPhone highlights">
-  <div class="trust-item"><span class="trust-dot"></span>No account required</div>
-  <div class="trust-item"><span class="trust-dot"></span>Notification text not uploaded</div>
-  <div class="trust-item"><span class="trust-dot"></span>Core tools work offline</div>
+  <div class="trust-item"><span class="trust-dot"></span>Core features free forever</div>
+  <div class="trust-item"><span class="trust-dot"></span>Notification text never uploaded</div>
+  <div class="trust-item"><span class="trust-dot"></span>Verified carrier recognition</div>
   <div class="trust-item"><span class="trust-dot"></span>Open privacy policy</div>
+  <div class="trust-item"><span class="trust-dot"></span>Works offline</div>
 </section>
 
 <section class="features" id="features">
   <div class="section-label">What TrustPhone Does</div>
-  <h2 class="section-title">Practical tools for<br>safer decisions</h2>
+  <h2 class="section-title">Calm protection.<br>Plain English explanations.</h2>
   <p class="section-sub">
-    Current security analysis stays on your phone. TrustPhone explains warning
-    signs so that you can decide what to do next.
+    TrustPhone tells you what's actually happening on your phone — without
+    alarming you. No scores, no jargon, no fear.
   </p>
 
   <div class="features-grid">
+
     <article class="feature-card large">
-      <span class="feature-tag">Optional Notification Access</span>
+      <span class="feature-tag tag-free">Free — Notification Safety</span>
       <div class="feature-icon">🔍</div>
-      <h3>Multi-stage notification review</h3>
+      <h3>Scam message detection</h3>
       <p>
-        When you enable Notification Access, TrustPhone reviews notification
-        previews locally for warning signs such as urgency patterns, suspicious
-        links, and related context across messages from the same sender.
-        Notification text is not uploaded.
+        TrustPhone reviews notification previews locally for warning signs —
+        suspicious links, impersonated brands, urgency patterns, and fake
+        delivery alerts. Verified messages from T-Mobile, Verizon, AT&amp;T,
+        Jio, and Airtel are automatically recognized and never flagged.
+        Notification text is never uploaded.
       </p>
     </article>
 
     <article class="feature-card">
-      <div class="feature-icon">✅</div>
-      <h3>Sender-source checks</h3>
-      <p>
-        Checks whether messages claiming to be from known sources match
-        TrustPhone's locally stored sender information. This is a helpful review
-        signal, not a guarantee.
-      </p>
-    </article>
-
-    <article class="feature-card">
+      <span class="feature-tag tag-free">Free</span>
       <div class="feature-icon">📦</div>
-      <h3>Review newly installed apps</h3>
+      <h3>App safety review</h3>
       <p>
-        See where an installed app came from, the access it may use, and
-        signals worth reviewing in plain English.
+        See where a newly installed app came from, what access it uses,
+        and any signals worth reviewing — in plain English.
+      </p>
+    </article>
+
+    <article class="feature-card large">
+      <span class="feature-tag tag-premium">Premium — AI Scam Detection</span>
+      <div class="feature-icon">🤖</div>
+      <h3>Cloud AI threat analysis</h3>
+      <p>
+        When on-device analysis isn't certain, TrustPhone Premium can
+        escalate to Google Gemini for a second opinion. Only the message
+        text is sent — never your name, contacts, or identity. OTPs, phone
+        numbers, emails, and card numbers are masked before sending.
+        You can disable cloud escalation anytime.
       </p>
     </article>
 
     <article class="feature-card">
+      <span class="feature-tag tag-free">Free</span>
       <div class="feature-icon">🗂️</div>
       <h3>APK file check</h3>
       <p>
-        Inspect an APK file before installing it. TrustPhone shows requested
-        permissions, file details, and warning signs to help you decide.
+        Inspect an APK before installing it. TrustPhone shows requested
+        permissions and warning signs so you can decide with confidence.
       </p>
     </article>
 
     <article class="feature-card">
+      <span class="feature-tag tag-free">Free</span>
       <div class="feature-icon">🌐</div>
-      <h3>Turn off unwanted website notifications</h3>
+      <h3>Website notification blocker</h3>
       <p>
         Follow a simple guide to review and turn off website notifications
-        that you do not recognize.
+        you don't recognize — the most common source of fake alerts.
       </p>
     </article>
 
     <article class="feature-card">
+      <span class="feature-tag tag-premium">Add-on · $4.99 one-time</span>
       <div class="feature-icon">🔒</div>
-      <h3>Encrypted local storage</h3>
+      <h3>Independent contacts vault</h3>
       <p>
-        Warning history is stored locally in an encrypted SQLCipher database.
-        Alert history auto-deletes after 7 days, sender history after 90 days.
-        You can clear it anytime.
+        Keep an encrypted copy of your contacts independent of Google.
+        If your Google account gets locked, restore everything with a
+        secure PIN — no Google login needed. One-time purchase, yours forever.
       </p>
     </article>
+
+    <article class="feature-card">
+      <span class="feature-tag tag-premium">Premium</span>
+      <div class="feature-icon">👻</div>
+      <h3>Recent popup tracer</h3>
+      <p>
+        Wondering which app just threw a full-screen ad or overlay on your
+        screen? TrustPhone traces recent background activity to identify
+        the culprit — runs entirely on your device.
+      </p>
+    </article>
+
+    <article class="feature-card">
+      <span class="feature-tag tag-premium">Premium</span>
+      <div class="feature-icon">🔕</div>
+      <h3>Notification quieting &amp; limits</h3>
+      <p>
+        Mute repeated low-value alerts and set daily notification limits
+        for noisy apps. Take back control of your lock screen without
+        losing important alerts.
+      </p>
+    </article>
+
+    <article class="feature-card">
+      <span class="feature-tag tag-free">Free</span>
+      <div class="feature-icon">🔑</div>
+      <h3>Encrypted local storage</h3>
+      <p>
+        All warning history is stored in an AES-256 encrypted local
+        database. Alert history auto-deletes after 7 days. You can
+        clear everything from inside the app.
+      </p>
+    </article>
+
   </div>
 </section>
 
-<section class="cta" id="download">
+<section class="pricing" id="pricing">
+  <div class="pricing-inner">
+    <div class="section-label">Pricing</div>
+    <h2 class="section-title">Start free. Upgrade when you're ready.</h2>
+    <p class="section-sub" style="margin: 0 auto 0;">
+      Core scam detection is free forever. Premium adds AI-powered cloud
+      analysis, popup tracing, and notification limits.
+    </p>
+
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <h3>Free</h3>
+        <div class="pricing-price">$0</div>
+        <p class="pricing-note">Forever free, no card needed</p>
+        <hr class="pricing-divider">
+        <ul class="pricing-features">
+          <li>On-device scam detection</li>
+          <li>App safety review</li>
+          <li>APK file check</li>
+          <li>Website notification blocker</li>
+          <li>Verified carrier recognition</li>
+          <li>Encrypted local storage</li>
+          <li class="dimmed">Cloud AI scam analysis</li>
+          <li class="dimmed">Recent popup tracer</li>
+          <li class="dimmed">Notification quieting &amp; limits</li>
+          <li class="dimmed">Contacts vault ($4.99 add-on)</li>
+        </ul>
+        <a href="https://play.google.com/store/apps/details?id=app.trustphone" class="pricing-cta secondary" target="_blank">Download free</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="featured-badge">Most popular</div>
+        <h3>Premium Monthly</h3>
+        <div class="pricing-price">$2.99 <span>/month</span></div>
+        <p class="pricing-note">Cancel anytime</p>
+        <hr class="pricing-divider">
+        <ul class="pricing-features">
+          <li>Everything in Free</li>
+          <li>Cloud AI scam analysis (Gemini)</li>
+          <li>Recent popup tracer (ghost finder)</li>
+          <li>Notification quieting &amp; limits</li>
+          <li>Priority threat updates</li>
+          <li class="dimmed">Contacts vault — $4.99 add-on</li>
+          <li class="dimmed">TrustBrowser (coming soon)</li>
+        </ul>
+        <a href="https://play.google.com/store/apps/details?id=app.trustphone" class="pricing-cta primary" target="_blank">Start on Google Play</a>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Premium Annual</h3>
+        <div class="pricing-price">$29.99 <span>/year</span></div>
+        <p class="pricing-note">Save 15% vs monthly</p>
+        <hr class="pricing-divider">
+        <ul class="pricing-features">
+          <li>Everything in Free</li>
+          <li>Cloud AI scam analysis (Gemini)</li>
+          <li>Recent popup tracer (ghost finder)</li>
+          <li>Notification quieting &amp; limits</li>
+          <li>Priority threat updates</li>
+          <li class="dimmed">Contacts vault — $4.99 add-on</li>
+          <li class="dimmed">TrustBrowser (coming soon)</li>
+        </ul>
+        <a href="https://play.google.com/store/apps/details?id=app.trustphone" class="pricing-cta secondary" target="_blank">Start on Google Play</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta">
   <div class="cta-inner">
-    <h2>Understand the warning signs.</h2>
-<p>
-      TrustPhone is now on Google Play. No signup.
-      No account. Current security analysis stays on your phone.
+    <h2>Your phone shouldn't scare you.</h2>
+    <p>
+      TrustPhone is built for real people — especially those who just want
+      to know if something is safe, without the jargon. Free to download.
+      No account needed to get started.
     </p>
     <a href="https://play.google.com/store/apps/details?id=app.trustphone" class="btn-primary" target="_blank">▶ Get it on Google Play</a>
   </div>
 </section>
+
 </main>
 
 <footer>
@@ -502,5 +701,6 @@ footer {
   </div>
   <div class="footer-copy">© 2026 YS Ventures LLC</div>
 </footer>
+
 </body>
 </html>
