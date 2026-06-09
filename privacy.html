@@ -194,7 +194,7 @@ footer {
     TrustPhone performs its core security analysis locally on your Android device.
     Notification previews, APK file contents, installed-app information, and usage
     information are not uploaded to TrustPhone servers. The optional Contacts Backup
-    feature stores an encrypted copy of your contacts on Google Firebase — this is
+    feature stores a copy of your contacts on Google Firebase, protected in transit using TLS — this is
     clearly disclosed before you enable it and requires your consent. The optional
     Premium cloud scam detection feature sends anonymized message signals to Google
     Gemini for AI analysis — this is also opt-in and disclosed before use.
@@ -366,10 +366,10 @@ footer {
     </ul>
     <p><strong>How it is stored:</strong></p>
     <ul>
-      <li>Your contacts are encrypted on your device before being uploaded.</li>
-      <li>The encrypted backup is stored on Google Firebase, governed by
+      <li>Your contacts are securely stored on Google Firebase, protected in transit using TLS.
+</li>
+      <li>The backup is stored on Google Firebase, governed by
         <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Google Firebase's privacy terms</a>.</li>
-      <li>The backup is encrypted in transit using TLS and encrypted at rest.</li>
       <li>Your contacts are never shared with third parties.</li>
       <li>Your contacts are never used for advertising or profiling.</li>
     </ul>
